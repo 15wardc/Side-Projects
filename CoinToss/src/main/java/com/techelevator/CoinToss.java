@@ -19,8 +19,11 @@ public class CoinToss {
         Scanner keyboard = new Scanner(System.in);
         //show the users balance
         int balance = 100;
+        System.out.println("=======================");
+        System.out.println(" WELCOME TO COIN TOSS!!");
+        System.out.println("=======================");
         //ask how much they want to bet;
-        while (balance > 2) {
+        while (balance > 0) {
             System.out.println("Current balance is: " + balance);
             System.out.println("How much would you like to bet? ");
             String betAmountString = keyboard.nextLine();
@@ -30,7 +33,7 @@ public class CoinToss {
             String headsOrTails = keyboard.nextLine();
 
             Random rand = new Random();
-            int nxt = rand.nextInt(1);
+            int nxt = rand.nextInt(2);
             if (nxt == 0 && headsOrTails.equalsIgnoreCase("heads")){
                 System.out.println("Heads");
                 System.out.println("You win " + betAmountString);
